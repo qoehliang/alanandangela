@@ -222,3 +222,7 @@ td,
 th {
 	padding: 0
 }
+
+dt {
+	margin-bottom: 20px; /* Adjust the value (20px) for desired spacing */
+  }
