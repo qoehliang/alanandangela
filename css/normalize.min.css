@@ -226,3 +226,8 @@ th {
 dd {
 	margin-bottom: 20px; /* Adjust the value (20px) for desired spacing */
   }
+
+.travel ul ul { /* Targets nested lists within the .travel section */
+  list-style-type: disc;  /* Use circle as the bullet point style */
+  margin-left: 20px;     /* Indent the nested list */
+}
