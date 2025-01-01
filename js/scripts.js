@@ -200,7 +200,7 @@ $(document).ready(function () {
             address: 'Yering Station Winery',
 
             // Event Description
-            description: "We can't wait to see you on our big day."
+            description: "We can't wait to see you on our big day. https://alanandangela.online"
         }
     });
 
