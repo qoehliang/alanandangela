@@ -1,7 +1,8 @@
 let images = [
     '../img/hero-min.jpg', 
-    '../img/hero-min.jpg', 
-    '../img/hero-min.jpg' // Add more image paths as needed
+    '../img/hero-min2.jpg', 
+    '../img/hero-min3.jpg',
+    '../img/hero-min4.jpg'
   ];
   let currentImage = 0;
   const heroElement = document.querySelector('.hero');
