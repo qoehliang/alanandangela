@@ -21,13 +21,13 @@ document.addEventListener('DOMContentLoaded', function() {
   
     function changeBackgroundImage() {
         heroElement.style.backgroundImage = `url(${images[currentImage]})`;
-        currentImage = (currentImage + 1) % images.length;
-    
-        // Update circle indicators (added below)
+
         updateCircleIndicators(); 
+
+        currentImage = (currentImage + 1) % images.length;
       }
 
-let intervalId = setInterval(changeBackgroundImage, 5000); // Store the interval ID
+  let intervalId = setInterval(changeBackgroundImage, 5000);
 
   // --- Circle indicator logic ---
 
@@ -38,10 +38,10 @@ let intervalId = setInterval(changeBackgroundImage, 5000); // Store the interval
     const indicator = document.createElement('div');
     indicator.classList.add('indicator');
     indicator.addEventListener('click', function() {
-      clearInterval(intervalId); // Stop slideshow when clicked
-      currentImage = i; 
-      changeBackgroundImage();
-    });
+        currentImage = i; 
+        changeBackgroundImage();
+        resetTimer(); // Reset the timer after clicking a bubble
+      });
     indicatorContainer.appendChild(indicator);
   }
   heroElement.appendChild(indicatorContainer); // Add to hero
@@ -57,6 +57,11 @@ let intervalId = setInterval(changeBackgroundImage, 5000); // Store the interval
     });
   }
 
+  function resetTimer() {
+    clearInterval(intervalId);
+    intervalId = setInterval(changeBackgroundImage, 5000);
+  }
+  
   updateCircleIndicators(); // Initial update
 
 });
