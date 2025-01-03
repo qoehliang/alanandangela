@@ -26,24 +26,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
 let intervalId = setInterval(changeBackgroundImage, 5000); // Store the interval ID
 
-// Add buttons or controls for manual toggling
-const prevButton = document.createElement('button');
-prevButton.textContent = 'Previous';
-const nextButton = document.createElement('button');
-nextButton.textContent = 'Next';
-
-// Append buttons to the hero element or another suitable container
-heroElement.appendChild(prevButton);
-heroElement.appendChild(nextButton);
-
-prevButton.addEventListener('click', function() {
-  clearInterval(intervalId); // Stop automatic slideshow
-  currentImage = (currentImage - 1 + images.length) % images.length; // Decrement with wrap-around
-  changeBackgroundImage();
-});
-
-nextButton.addEventListener('click', function() {
-  clearInterval(intervalId); // Stop automatic slideshow
-  changeBackgroundImage();
-});
 });
